@@ -1,24 +1,20 @@
 # README
+# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is a real-time messenger app made with Ruby on Rails.
 
 * Ruby version
-
-* System dependencies
+- ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin18]
 
 * Configuration
+- run bundle install to install all gems
 
 * Database creation
-
-* Database initialization
+- run rails db:migrate
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+- run rails test
 
 * Deployment instructions
-
-* ...
+- rails s to start server
+- It is currently deployed on Heroku as well here: https://blog-on-rails-app.herokuapp.com
