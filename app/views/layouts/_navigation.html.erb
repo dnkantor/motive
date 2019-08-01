@@ -54,9 +54,15 @@
                     </div>
             </div>
 
-            <div class="ui item">
-                <div class="ui primary button">Sign up</div>
-            </div>
+            <% if !logged_in? %>
+                <div class="ui item">
+                    <%= link_to  "Sign up", login_path, class: "ui primary button" %>
+                </div>
+            <% else %>
+                <div class="ui item">
+                    <%= link_to  "Logout", logout_path, method: :delete, class: "ui red button" %>
+                </div>
+            <% end %>
         </div>
     </div>
 </div>

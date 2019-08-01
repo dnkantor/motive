@@ -1,0 +1,18 @@
+<div class="event">
+    <div class="label">
+    <p>Put gravatar profile image</p>
+    </div>
+    <div class="content">
+        <div class="summary">
+            <em class="user">
+                <%= message.user.username %>
+            </em>
+            <div class="date">
+                <%= distance_of_time_in_words(@datetime, message.created_at) %> ago 
+            </div>
+        </div>
+        <div class="extra text">
+            <%= message.body %>
+        </div>
+    </div>
+</div>
