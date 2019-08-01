@@ -1,8 +1,6 @@
 <div class="ui inverted menu">
     <div class="ui container">
-        <a class="item">
-            Chatroom
-        </a>
+        <%= link_to  "Chatroom", root_path, class: "item" %>
         <a class="item">
             Messages
         </a>
@@ -19,11 +17,7 @@
                     Account
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <div class="item">New</div>
-                        <div class="item">
-                        <span class="description">ctrl + o</span>
-                        Open...
-                        </div>
+                        <%= link_to  "Log in", login_path, class: "item" %>
                         <div class="item">
                         <span class="description">ctrl + s</span>
                         Save as...
