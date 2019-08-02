@@ -34,15 +34,13 @@
                 </div>
             </div>
             <div class="extra content">
-                <form class="ui reply form">
+                <%= form_for(@message, html: { class: "ui reply form", role: "form" }, url: message_path) do |f| %>
                     <div class="field">
                     <div class="ui fluid action input">
-                        <input type="text" placeholder="What's the motive?">
-                        <div class="ui orange labeled submit icon button">
-                            Send <i class="arrow right icon edit"></i>
-                        </div>
+                        <%= f.text_field :body %>
+                            <%= f.button "Send" '<i class="arrow right icon edit"></i>'.html_safe , class: "ui orange labeled submit icon button" %>
                     </div>
-                </form>
+                <% end %>
             </div>
         </div>
     </div>

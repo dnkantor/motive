@@ -2,7 +2,7 @@
         <div class="ui <%= "#{name}"%> message">
             <i class="close icon"></i>
             <div class="header">
-            <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+                <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
             </div>
         </div>
 <% end %>
