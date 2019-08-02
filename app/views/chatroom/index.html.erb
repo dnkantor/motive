@@ -28,17 +28,17 @@
     </div>
     <div class="twelve wide column">
         <div class="ui fluid card chatbox">
-            <div class="content">
-                <div class="ui feed">
+            <div class="content" id="messages">
+                <div class="ui feed" id="message-container">
                     <%= render  @messages %>
                 </div>
             </div>
             <div class="extra content">
-                <%= form_for(@message, html: { class: "ui reply form", role: "form" }, url: message_path) do |f| %>
+                <%= form_for(@message, html: { class: "ui reply form", role: "form" }, url: message_path, remote: true) do |f| %>
                     <div class="field">
-                    <div class="ui fluid action input">
+                    <div class="ui fluid icon input">
                         <%= f.text_field :body %>
-                            <%= f.button "Send" '<i class="arrow right icon edit"></i>'.html_safe , class: "ui orange labeled submit icon button" %>
+                            <%= f.button "Send" '<i class="arrow right icon edit"></i>'.html_safe , class: "ui orange labeled submit icon button", id: "submit-button" %>
                     </div>
                 <% end %>
             </div>
