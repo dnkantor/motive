@@ -1,0 +1,16 @@
+<h2 class="ui center aligned icon header">
+  <i class="circular inverted orange fire icon"></i>
+  Motive
+</h2>
+
+<%= form_for(:user, html: { class: "ui form", role: "form" }, url: users_path) do |f| %>
+  <div class="field">
+    <%= f.label :username, "Username" %>
+    <%= f.text_field :username, placeholder: "daniel"%>
+  </div>
+  <div class="field">
+    <%= f.label :password, "Password" %>
+    <%= f.password_field :password %>
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+<% end %>
