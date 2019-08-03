@@ -12,15 +12,11 @@
                 </div>
                 <div class="center aligned description">
                     <div class="ui inverted vertical center aligned menu">
-                        <a class="item active">
-                            Home
-                        </a>
+                    <% @users.each do |user| %>
                         <a class="item">
-                            Messages
+                            <%= user.username %>
                         </a>
-                        <a class="item">
-                            Friends
-                        </a>
+                    <% end %>
                     </div>
                 </div>
             </div>

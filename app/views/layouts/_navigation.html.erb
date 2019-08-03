@@ -1,18 +1,28 @@
 <div class="ui inverted menu">
     <div class="ui container">
         <%= link_to  "Chatroom", root_path, class: "item" %>
-        <a class="item">
+        <%
+=begin%>
+ <a class="item">
             Messages
-        </a>
+        </a> 
+<%
+=end%>
         <div class="right menu">
-            <div class="ui item">
+            <%
+=begin%>
+ <div class="ui item">
                 <div class="ui icon input">
                     <input type="text" placeholder="Search...">
                     <i class="search link icon"></i>
                 </div>
-            </div>
+            </div> 
+<%
+=end%>
 
-            <div class="ui item">
+<%
+=begin%>
+ <div class="ui item">
                 <div class="ui dropdown">
                     Account
                     <i class="dropdown icon"></i>
@@ -52,11 +62,13 @@
                         <div class="item">E-mail Collaborators</div>
                     </div>
                     </div>
-            </div>
+            </div> 
+<%
+=end%>
 
             <% if !logged_in? %>
                 <div class="ui item">
-                    <%= link_to  "Sign up", login_path, class: "ui primary button" %>
+                    <%= link_to  "Sign up", signup_path, class: "ui primary button" %>
                 </div>
             <% else %>
                 <div class="ui item">

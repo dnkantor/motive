@@ -6,5 +6,6 @@ class ChatroomController < ApplicationController
         @message = Message.new
         @messages = Message.all
         @datetime = DateTime.now
+        @users = User.all
     end
 end
